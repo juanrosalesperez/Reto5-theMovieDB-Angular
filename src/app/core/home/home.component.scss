@@ -1,0 +1,95 @@
+@import "./../../../colors.scss";
+.titulo {
+  color: $color_prime;
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.arrowFromLeft {
+  overflow: hidden;
+  outline: none;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  background-color: hsl(222, 100%, 95%);
+  color: $color_prime;
+  position: relative;
+  div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  span {
+    display: inline-block;
+    transition: transform 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  }
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    fill: $color_prime;
+    opacity: 0;
+    transform: translate(-10px, -50%);
+    transition: opacity 0.3s 0.05s cubic-bezier(0.455, 0.03, 0.515, 0.955),
+      transform 0.3s 0.05s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  }
+}
+
+.arrowFromLeft:hover {
+  span {
+    transform: translateX(15px);
+  }
+  svg {
+    opacity: 1;
+    transform: translate(15px, -50%);
+  }
+}
+
+.arrowFromRight {
+  overflow: hidden;
+  outline: none;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  background-color: hsl(222, 100%, 95%);
+  color: $color_prime;
+  position: relative;
+  div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  span {
+    display: inline-block;
+    transition: transform 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  }
+  svg {
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    fill: $color_prime;
+    opacity: 0;
+    transform: translate(-10px, -50%);
+    transition: opacity 0.3s 0.05s cubic-bezier(0.455, 0.03, 0.515, 0.955),
+      transform 0.3s 0.05s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  }
+}
+
+.arrowFromRight:hover {
+  span {
+    transform: translateX(-15px);
+  }
+  svg {
+    opacity: 1;
+    transform: translate(-35px, -45%);
+  }
+}

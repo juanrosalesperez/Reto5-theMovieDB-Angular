@@ -1,0 +1,23 @@
+<h1 class="titulo">Tus películas favoritas</h1>
+<div class="row">
+  <div class="col-md-12">
+    <h2>Lista de películas</h2>
+    <p class="styleMovies">
+      Tu tienes {{ favorits.length }} películas en tu lista
+    </p>
+    <hr />
+    <p *ngIf="favorits.length === 0">Añade tu primera película</p>
+    <ul class="row list-unstyled">
+      <li
+        class="col-md-6 d-flex align-items-stretch"
+        *ngFor="let movie of favorits"
+      >
+        <div>
+          <div>
+            <app-movie [movie]="movie"></app-movie>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

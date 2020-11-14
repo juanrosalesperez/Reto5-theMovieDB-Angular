@@ -1,0 +1,50 @@
+@import "./../../../colors.scss";
+
+.titulo {
+  color: $color_prime;
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.styleMovies {
+  padding: 1% 2%;
+  width: 25%;
+  border: none;
+  outline: none;
+  border-radius: 61px;
+  box-shadow: inset 0 0 0 2px $color_prime;
+  color: $color_prime_dark;
+}
+
+@media (max-width: 1199px) {
+  .styleMovies {
+    width: 28%;
+  }
+}
+
+@media (max-width: 991px) {
+  .styleMovies {
+    width: 37%;
+  }
+}
+@media (max-width: 767px) {
+  .styleMovies {
+    width: 50%;
+  }
+}
+@media (max-width: 511px) {
+  .styleMovies {
+    width: 61%;
+  }
+}
+@media (max-width: 425px) {
+  .styleMovies {
+    width: 65%;
+  }
+}
+@media (max-width: 391px) {
+  .styleMovies {
+    width: 90%;
+  }
+}

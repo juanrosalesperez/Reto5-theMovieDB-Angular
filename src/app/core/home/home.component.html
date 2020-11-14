@@ -1,0 +1,44 @@
+<h1 class="titulo">Peliculas Populares</h1>
+<div class="row">
+  <div class="col-md-12">
+    <h2>Busca tus peliculas</h2>
+    <ul class="row list-unstyled">
+      <li
+        class="col-md-6 d-flex align-items-stretch"
+        *ngFor="let movie of popular"
+      >
+        <div>
+          <div class="card-body">
+            <app-movie [movie]="movie"></app-movie>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div class="buttons">
+      <button class="arrowFromRight" (click)="lessMovies()">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+        >
+          <path d="M0 0h24v24H0z" fill="none" />
+          <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+        </svg>
+        <span>Menos Películas</span>
+      </button>
+      <button class="arrowFromLeft" (click)="moreMovies()">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+        >
+          <path d="M0 0h24v24H0z" fill="none" />
+          <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+        </svg>
+        <span>Más Películas</span>
+      </button>
+    </div>
+  </div>
+</div>

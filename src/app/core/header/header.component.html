@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-lg my-nav">
+  <button
+    class="navbar-toggler"
+    type="button"
+    (click)="isMenuCollapsed = !isMenuCollapsed"
+  >
+    &#9776;
+  </button>
+
+  <div class="collapse navbar-collapse" [ngbCollapse]="isMenuCollapsed">
+    <ul class="navbar-nav mr-auto">
+      <li
+        class="nav-item px-2"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        <div class="borderLeftRight" [routerLink]="['']">Inicio</div>
+      </li>
+      <li class="nav-item px-2" routerLinkActive="active">
+        <div class="borderLeftRight" [routerLink]="['favorites']">
+          Favoritas
+        </div>
+      </li>
+      <li class="nav-item px-2" routerLinkActive="active">
+        <div class="borderLeftRight" [routerLink]="['moviesTop']">
+          Películas Top
+        </div>
+      </li>
+    </ul>
+    <form
+      autocomplete="off"
+      class="form-inline my-2 my-lg-0"
+      [formGroup]="searchForm"
+      novalidate
+    >
+      <input
+        aria-label="Pesquisar"
+        class="form-control mr-sm-2"
+        formControlName="searchText"
+        id="searchText"
+        name="searchText"
+        placeholder="Busca tu película..."
+        type="search"
+      />
+      <button
+        class="btn btn-outline-info my-2 my-sm-0"
+        (click)="search(searchForm.value)"
+        type="submit"
+      >
+        Buscar
+      </button>
+    </form>
+  </div>
+</nav>

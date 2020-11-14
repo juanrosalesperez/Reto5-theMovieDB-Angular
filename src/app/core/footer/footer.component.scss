@@ -1,0 +1,35 @@
+@import "./../../../colors.scss";
+
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: $color_grey;
+
+  p {
+    color: $color_prime_dark;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+}
+
+.buttonGenre {
+  display: inline-block;
+  padding: 1% 2%;
+  margin: 0 1% 0 0;
+  border: none;
+  outline: none;
+  background-color: $color_prime;
+  border-radius: 61px;
+  box-shadow: inset 0 0 0 2px $color_prime;
+  transition: 300ms box-shadow cubic-bezier(0.4, 0, 0.6, 1),
+    300ms background-color cubic-bezier(0.4, 0, 0.6, 1);
+}
+.buttonGenre:hover {
+  background-color: $color_prime_soft;
+  box-shadow: inset 0 0 0 4px $color_prime;
+}
+.link {
+  color: $color_black;
+  text-decoration: none;
+}

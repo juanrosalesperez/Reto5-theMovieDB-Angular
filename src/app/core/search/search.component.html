@@ -1,0 +1,34 @@
+<h1 class="text-info">Buscador de peliculas</h1>
+<hr />
+
+<div class="row">
+  <div class="col-md-12">
+    <h2>Este es tu resultado para tu busqueda de '{{ text }}'</h2>
+    <p>Se han encontrado {{ totalResults }} con tu busqueda.</p>
+    <hr />
+    <ul class="row list-unstyled">
+      <li
+        class="col-md-6 d-flex align-items-stretch"
+        *ngFor="let movie of movies"
+      >
+        <div class="mb-2">
+          <div>
+            <app-movie [movie]="movie"></app-movie>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="row mb-5">
+  <div class="col-md-12 text-center">
+    <button
+      class="btn btn-outline-info text-center"
+      (click)="loadMore()"
+      *ngIf="movies.length < totalResults"
+    >
+      Quiero más peliculas
+    </button>
+  </div>
+</div>

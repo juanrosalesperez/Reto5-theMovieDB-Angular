@@ -1,0 +1,39 @@
+<section id="detalhes" [@detailAppeared]="detailState" *ngIf="detail">
+  <div class="row">
+    <div class="col-sm-4">
+      <img
+        [src]="'https://image.tmdb.org/t/p/w500' + detail.poster_path"
+        [alt]="detail.title"
+      />
+    </div>
+    <div class="col-sm-8">
+      <dl class="movie">
+        <h1 class="titulo">{{ detail.title }}</h1>
+        <h2>{{ detail.release_date | date: "longDate" }}</h2>
+        <p>{{ detail.overview }}</p>
+        <h5>Votación</h5>
+        <span>
+          <span class="buttonAverage">{{ detail.vote_average * 10 }}%</span>
+        </span>
+        <h5>Genero</h5>
+        <dd>
+          <ul class="list-unstyled">
+            <li class="buttonGenre" *ngFor="let genre of detail.genres">
+              {{ genre.name }}
+            </li>
+          </ul>
+        </dd>
+      </dl>
+      <button class="buttonFavorite" (click)="addFavorite()" *ngIf="!favorite">
+        <span> Favorito ♡</span>
+      </button>
+      <button
+        class="buttonFavorite"
+        (click)="removeFavorite()"
+        *ngIf="favorite"
+      >
+        <span>Favorito ✕</span>
+      </button>
+    </div>
+  </div>
+</section>
