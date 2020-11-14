@@ -1,27 +1,37 @@
-# mi-themoviedb
+# Proyecto Web
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.4.
+_Creación buscador de peliculas conectado a la API de TheMovieDB_
 
-## Development server
+Este proyecto esta creado con [Angular CLI](https://github.com/angular/angular-cli) version 9.1.4.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Comenzando
 
-## Code scaffolding
+_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu ordenador local para propósitos de desarrollo y pruebas._
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Instalación
 
-## Build
+- He trabajado con dependencias como:
+  ng-bootstrap
+  material
+  rxjs
+- Descarga el repositorio con git clone
+- Para instalar `npm install`
+- Para iniciarlo `ng serve`
+- Abre [http://localhost:4200](http://localhost:4200) para ver el proyecto en el Navegador.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Abrir con Docker
 
-## Running unit tests
+- Descarga el repositorio con git clone
+- Ejecutar `docker run -d -p 80:80 mi-themoviedb:latest`
+- Abre [http://localhost](http://localhost) para ver el proyecto en el Navegador.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Autor
 
-## Running end-to-end tests
+- **Juan Antonio Rosales**
+- [Github](https://github.com/juanrosalesperez)
+- [LindkeIn](https://www.linkedin.com/in/juan-antonio-rosales-perez/)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Expresiones de Gratitud
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- Comenta a otros sobre este proyecto
+- Si tienes algún comentario te lo agradecería porque estoy aprendiendo. Las críticas constructivas siempre son buenas
